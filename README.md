@@ -10,4 +10,6 @@ Part:
 4. GSM SIM900A
 5. GPS Ublox NEO-6M
 
-Note: tambahkan step up di modul gsm (kadang gsmnya hidup-mati kalau disambung langsung seperti di diagram)
+Note:
+- yang digunakan di projek ini WEMOS D1 Mini ver 3.1.0
+- tambahkan step up di modul gsm (kadang gsmnya hidup-mati kalau disambung langsung ke seperti di diagram)
