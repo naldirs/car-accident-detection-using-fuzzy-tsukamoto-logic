@@ -1,5 +1,5 @@
 # Pendeteksi Kecelakaan Mobil menggunakan Logika Fuzzy Tsukamoto
-Ini adalah kode program dari tugas akhir skripsi.
+Lampiran kode program dari tugas akhir skripsi.
 
 - Himpunan Fuzzy Fungsi Input
 
