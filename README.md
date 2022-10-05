@@ -8,11 +8,11 @@ Ini adalah kode program dari tugas akhir skripsi.
 | Akselerometer (X) | Gravitasi(g)| ≤-4 | Tinggi(n)
 | | | -4 – 4	| Rendah |
 | | | ≥ 4	| Tinggi(p) |
-| Akselerometer (Y) | Gravitasi(g) | ≤-8 |	Sangat Tinggi(n) |
+| Akselerometer (Y) | Gravitasi(g) | ≤-8 |	SangatTinggi(n) |
 | | | -8 – 0 |	Tinggi(n)
 | | | -4 – 4 |	Rendah
 | | | 0 – 8	| Tinggi(p)
-| | | ≥ 8	| Sangat Tinggi(p)
+| | | ≥ 8	| SangatTinggi(p)
 | Getaran	 | Getaran | 0 – 5000 |	Rendah |
 | |	|	≥ 5000 |	Tinggi |
 
