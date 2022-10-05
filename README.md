@@ -5,7 +5,7 @@ Ini adalah kode program dari tugas akhir skripsi.
 
 | Variabel | Satuan | Semesta Pembicaraan | Nama Himpunan |
 |----------|--------|---------------------|---------------|
-| Akselerometer(X) | Gravitasi(g)| ≤-4 | Tinggi(n)
+| Akselerometer (X) | Gravitasi(g)| ≤-4 | Tinggi(n)
 | | | -4 – 4	| Rendah |
 | | | ≥ 4	| Tinggi(p) |
 | Akselerometer (Y) | Gravitasi(g) | ≤-8 |	Sangat Tinggi(n) |
