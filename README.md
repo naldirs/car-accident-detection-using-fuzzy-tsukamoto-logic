@@ -9,4 +9,5 @@ Part:
 3. Buzzer passive
 4. GSM SIM900A
 5. GPS Ublox NEO-6M
-Note: tambahkan step up di modul gsm
+
+Note: tambahkan step up di modul gsm (kadang gsmnya hidup-mati kalau disambung langsung seperti di diagram)
