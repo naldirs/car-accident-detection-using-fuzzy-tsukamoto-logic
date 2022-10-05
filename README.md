@@ -36,8 +36,8 @@ Ini adalah kode program dari tugas akhir skripsi.
 | 6	| Tinggi(n)	| Rendah	| Rendah	| Normal |
 | 7	| Tinggi(n)	| Tinggi(p)	| Tinggi	| Tabrakan |
 | 8	| Tinggi(n)	| Tinggi(p)	| Rendah	| Normal |
-| 9	| Tinggi(n)	| Sangat Tinggi(p)	| Tinggi	| Terguling |
-| 10 | Tinggi(n)	| Sangat Tinggi(p)	| Rendah	| Normal |
+| 9	| Tinggi(n)	| SangatTinggi(p)	| Tinggi	| Terguling |
+| 10 | Tinggi(n)	| SangatTinggi(p)	| Rendah	| Normal |
 | 11 | Rendah	| SangatTinggi(n)	| Tinggi	| Terguling |
 | 12 | Rendah	| SangatTinggi(n)	| Rendah	| Normal |
 | 13 | Rendah	| Tinggi(n)	| Tinggi	| Tabrakan |
@@ -46,8 +46,8 @@ Ini adalah kode program dari tugas akhir skripsi.
 | 16 | Rendah	| Rendah	| Rendah	| Normal |
 | 17 | Rendah	| Tinggi(p)	| Tinggi	| Tabrakan |
 | 18 | Rendah	| Tinggi(p)	| Rendah	| Normal |
-| 19 | Rendah	| Sangat Tinggi(p)	| Tinggi	| Terguling |
-| 20 | Rendah	| Sangat Tinggi(p)	| Rendah	| Normal |
+| 19 | Rendah	| SangatTinggi(p)	| Tinggi	| Terguling |
+| 20 | Rendah	| SangatTinggi(p)	| Rendah	| Normal |
 | 21 | Tinggi(p)	| SangatTinggi(n)	| Tinggi	| Terguling |
 | 22 | Tinggi(p)	| SangatTinggi(n)	| Rendah	| Normal |
 | 23 | Tinggi(p)	| Tinggi(n)	| Tinggi	| Tabrakan |
@@ -56,8 +56,8 @@ Ini adalah kode program dari tugas akhir skripsi.
 | 26 | Tinggi(p)	| Rendah	| Rendah	| Normal |
 | 27 | Tinggi(p)	| Tinggi(p)	| Tinggi	| Tabrakan |
 | 28 | Tinggi(p)	| Tinggi(p)	| Rendah	| Normal |
-| 29 | Tinggi(p)	| Sangat Tinggi(p)	|Tinggi	| Terguling |
-| 30 | Tinggi(p)	| Sangat Tinggi(p)	|Rendah	| Normal |
+| 29 | Tinggi(p)	| SangatTinggi(p)	|Tinggi	| Terguling |
+| 30 | Tinggi(p)	| SangatTinggi(p)	|Rendah	| Normal |
 
 # Wiring Diagram
 ![skripsi sensor pendeteksi fix 3_bb](https://user-images.githubusercontent.com/74083958/193984130-8657b2d0-5125-4660-97df-59785a902755.png)
