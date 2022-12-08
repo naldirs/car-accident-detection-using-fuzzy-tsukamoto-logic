@@ -90,4 +90,5 @@ Note:
 
 ### Dokumentasi pengambilan data serta pengujian
 ![4 13 Pengujian Sistem (RC)](https://user-images.githubusercontent.com/74083958/206364580-7a3126a6-1683-4181-8b67-284e4206f742.JPG)
+![IMG_20211218_142200 with circle](https://user-images.githubusercontent.com/74083958/206368583-fa8326c0-80e7-42ce-b5a1-ebd5f41d4930.jpg)
 
