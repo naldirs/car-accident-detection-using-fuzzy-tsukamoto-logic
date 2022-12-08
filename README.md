@@ -80,11 +80,13 @@ Note:
 
 ## Hasil dan Dokumentasi
 ### Bentuk alat secara keseluruhan
-![4 1 Implementasi Alat (dg  Detail)](https://user-images.githubusercontent.com/74083958/206360464-a132c178-489a-4d74-9609-bd3912338ea7.PNG)
+![4 1 Implementasi Alat (dg  Detail)](https://user-images.githubusercontent.com/74083958/206363446-bcba1f2c-aae3-4c83-97a3-a2459413a16b.PNG)
+
 
 ### Tampilan Output Serial
 ![serial monitor](https://user-images.githubusercontent.com/74083958/206359982-eec76994-6d8d-4cf2-a9f3-abeaaf07f6af.png)
 
 ### Hasil pengiriman pesan
-![4 15 Pengujian Pengiriman Pesan (crop+edit)](https://user-images.githubusercontent.com/74083958/206362749-a684c732-2d54-47ef-8fc3-747ece685435.jpg)
+![4 15 Pengujian Pengiriman Pesan (crop+edit)](https://user-images.githubusercontent.com/74083958/206363499-45680fda-e81e-42a2-b97c-446a1697cb20.jpg)
+
 
