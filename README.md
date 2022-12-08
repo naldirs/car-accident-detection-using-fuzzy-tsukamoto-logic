@@ -79,7 +79,7 @@ Note:
 - tambahkan step up di modul gsm (kadang gsmnya hidup-mati kalau disambung langsung ke seperti di diagram)
 
 ## Hasil dan Dokumentasi
-Bentuk alat secara keseluruhan
+### Bentuk alat secara keseluruhan
 ![4 1 Implementasi Alat (dg  Detail)](https://user-images.githubusercontent.com/74083958/206360464-a132c178-489a-4d74-9609-bd3912338ea7.PNG)
 
 ### Tampilan Output Serial
