@@ -1,130 +1,78 @@
+/* Nilai fungsi input */
+float xTinggin[2] = {-4,0}; float xRendah[3] = {-4,0,4}; float xTinggip[2] = {0,4};
+float ySangatTinggin[2] = {-8,-4}; float yTinggin[3] = {-8,-4,0}; float yRendah[3] = {-4,0,4}; float yTinggip[3] = {0,4,8}; float ySangatTinggip[2] = {4,8};
+float gRendah[2] = {0,5000}; float gTinggi[2] = {0,5000};
+/* Nilai fungsi output */
+float sNormal[2] = {0,3};  float sTabrakan[3] = {3,4.5,6};   float sTerguling[2] = {6,9};
+
 // Fuzzyfikasi
-// himpunan akselerometer(X)
-float xTinggin(float aksx){
-  float xtinggin;
+float kurvaTurun(float input, float batasA, float batasB){
+  float hasil;
   //batas b[0] = a, b[1] = b
-  float b[2] = {-4,0};
-  if(aksx <= b[0]) xtinggin=1; 
-  else if (aksx >= b[0] && aksx <= b[1]) xtinggin=(b[1]-aksx)/(b[1]-b[0]);
-  else if (aksx >= b[1]) xtinggin=0;
-  return xtinggin;
+  float b[2] = {batasA, batasB};
+  if(input <= b[0]) hasil=1; 
+  else if (input >= b[0] && input <= b[1]) hasil=(b[1]-input)/(b[1]-b[0]);
+  else if (input >= b[1]) hasil=0;
+  return hasil;
 }
-float xRendah(float aksx){
-  float xrendah;
+float kurvaSegitiga(float input, float batasA, float batasB, float batasC){
+  float hasil;
   //batas b[0]=a, b[1]=b, b[1]=c
-  float b[3] = {-4,0,4};
-  if(aksx <= b[0]) xrendah=0; 
-  else if (aksx >= b[0] && aksx <=b[1]) xrendah=(aksx-b[0])/(b[1]-b[0]);
-  else if (aksx >= b[1] && aksx <=b[2]) xrendah=(b[2]-aksx)/(b[2]-b[1]);
-  else if (aksx >= b[2]) xrendah=0;
-  return xrendah;
+  float b[3] = {batasA, batasB, batasC};
+  if(input <= b[0]) hasil=0; 
+  else if (input >= b[0] && input <=b[1]) hasil=(input-b[0])/(b[1]-b[0]);
+  else if (input >= b[1] && input <=b[2]) hasil=(b[2]-input)/(b[2]-b[1]);
+  else if (input >= b[2]) hasil=0;
+  return hasil;
 }
-float xTinggip(float aksx){
-  float xtinggip;
+float kurvaNaik(float input, float batasA, float batasB){
+  float hasil;
   //batas b[0] = a, b[1] = b
-  float b[2] = {0,4};
-  if(aksx <= b[0]) xtinggip=0; 
-  else if (aksx >= b[0] && aksx <= b[1]) xtinggip=(aksx-b[0])/(b[1]-b[0]);
-  else if (aksx >= b[1]) xtinggip=1;
-  return xtinggip;
-}
-// himpunan akselerometer(Y)
-float ySangatTinggin(float aksy){
-  float ysangattinggin;
-  //batas b[0] = a, b[1] = b
-  float b[2] = {-8,-4};
-  if(aksy <= b[0]) ysangattinggin=1; 
-  else if (aksy >= b[0] && aksy <=b[1]) ysangattinggin=(b[1]-aksy)/(b[1]-b[0]);
-  else if (aksy >= b[1]) ysangattinggin=0;
-  return ysangattinggin;
-}
-float yTinggin(float aksy){
-  float ytinggin;
-  //batas b[0]=a, b[1]=b, b[1]=c
-  float b[3] = {-8,-4,0};
-  if(aksy <= b[0]) ytinggin=0; 
-  else if (aksy >= b[0] && aksy <= b[1]) ytinggin=(aksy-b[0])/(b[1]-b[0]);
-  else if (aksy >= b[1] && aksy <= b[2]) ytinggin=(b[2]-aksy)/(b[2]-b[1]);
-  else if (aksy >= b[2]) ytinggin=0;
-  return ytinggin;
-}
-float yRendah(float aksy){
-  float yrendah;
-  //batas b[0]=a, b[1]=b, b[1]=c
-  float b[3] = {-4,0,4};
-  if(aksy <= b[0]) yrendah=0; 
-  else if (aksy >= b[0] && aksy <= b[1]) yrendah=(aksy-b[0])/(b[1]-b[0]);
-  else if (aksy >= b[1] && aksy <= b[2]) yrendah=(b[2]-aksy)/(b[2]-b[1]);
-  else if (aksy >= b[2]) yrendah=0;
-  return yrendah;
-}
-float yTinggip(float aksy){
-  float ytinggip;
-  //batas b[0]=a, b[1]=b, b[1]=c
-  float b[3] = {0,4,8};
-  if(aksy <= b[0]) ytinggip=0; 
-  else if (aksy >= b[0] && aksy <= b[1]) ytinggip=(aksy-b[0])/(b[1]-b[0]);
-  else if (aksy >= b[1] && aksy <= b[2]) ytinggip=(b[2]-aksy)/(b[2]-b[1]);
-  else if (aksy >= b[2]) ytinggip=0;
-  return ytinggip;
-}
-float ySangatTinggip(float aksy){
-  float ysangattinggip;
-  //batas b[0] = a, b[1] = b
-  float b[2] = {4,8};
-  if(aksy <= b[0]) ysangattinggip = 0; 
-  else if (aksy >= b[0] && aksy <= b[1]) ysangattinggip=(aksy-b[0])/(b[1]-b[0]);
-  else if (aksy >= b[1]) ysangattinggip=1;
-  return ysangattinggip;
-}
-//himpunan getaran
-float gRendah(float getr){
-  float grendah;
-  //batas b[0] = a, b[1] = b
-  float b[2] = {0,5000};
-  if(getr <= b[0]) grendah=1; 
-  else if (getr >= b[0] && getr <= b[1]) grendah=(b[1]-getr)/(b[1]-b[0]);
-  else if (getr >= b[1]) grendah=0;
-  return grendah;
-}
-float gTinggi(float getr){
-  float gtinggi;
-  //batas b[0] = a, b[1] = b
-  float b[2] = {0,5000};
-  if(getr <= b[0]) gtinggi=0; 
-  else if (getr >= b[0] && getr <= b[1]) gtinggi=(getr-b[0])/(b[1]-b[0]);
-  else if (getr >= b[1]) gtinggi=1;
-  return gtinggi;
+  float b[2] = {batasA, batasB};
+  if(input <= b[0]) hasil=0; 
+  else if (input >= b[0] && input <= b[1]) hasil=(input-b[0])/(b[1]-b[0]);
+  else if (input >= b[1]) hasil=1;
+  return hasil;
 }
 
 // menghitung nilai z dari ke 3 output
 float Normal(float z){
-  float normal;
-  float b[2] = {0,3};
-  normal=b[1]-(z*(b[1]-b[0]));
-  return normal;
+  float hitung;
+  hitung=sNormal[1]-(z*(sNormal[1]-sNormal[0]));
+  return hitung;
 }
 float Tabrakan(float z){
-  float tabrakan,t1,t2;
-  float b[3] = {3,4.5,6};
-  t1=b[0]+(z*(b[1]-b[0]));
-  t2=b[2]-(z*(b[2]-b[1]));
-  tabrakan = min(t1,t2);
-  return tabrakan;
+  float hitung,t1,t2;
+  t1=sTabrakan[0]+(z*(sTabrakan[1]-sTabrakan[0]));
+  t2=sTabrakan[2]-(z*(sTabrakan[2]-sTabrakan[1]));
+  hitung = min(t1,t2);
+  return hitung;
 }
 float Terguling(float z){
-  float terguling;
-  float b[2] = {6,9};
-  terguling=b[0]+(z*(b[1]-b[0]));
-  return terguling;
+  float hitunng;
+  hitunng=sTerguling[0]+(z*(sTerguling[1]-sTerguling[0]));
+  return hitunng;
 }
 
 float fuzzy(float x, float y, float g){
   // tahap fuzzyfikasi
-  float xtinggin, xrendah, xtinggip, ysangattinggin, ytinggin, yrendah, ytinggip, ysangattinggip, grendah, gtinggi; 
-  xtinggin=xTinggin(x); xrendah=xRendah(x); xtinggip=xTinggip(x);
-  ysangattinggin=ySangatTinggin(y); ytinggin=yTinggin(y); yrendah=yRendah(y); ytinggip=yTinggip(y); ysangattinggip=ySangatTinggip(y);
-  grendah = gRendah(g); gtinggi = gTinggi(g);
+  float xtinggin, xrendah, xtinggip, 
+        ysangattinggin, ytinggin, yrendah, ytinggip, ysangattinggip, 
+        grendah, gtinggi;
+  
+  xtinggin=kurvaTurun(x, xTinggin[0], xTinggin[1]); 
+  xrendah=kurvaSegitiga(x, xRendah[0], xRendah[1], xRendah[2]); 
+  xtinggip=kurvaNaik(x, xTinggip[0], xTinggip[1]);
+
+  ysangattinggin=kurvaTurun(y, ySangatTinggin[0], ySangatTinggin[1]); 
+  ytinggin=kurvaSegitiga(y, yTinggin[0], yTinggin[1], yTinggin[2]); 
+  yrendah=kurvaSegitiga(y, yRendah[0], yRendah[1], yRendah[2]); 
+  ytinggip=kurvaSegitiga(y, yTinggip[0], yTinggip[1], yTinggip[2]); 
+  ysangattinggip=kurvaNaik(y, ySangatTinggip[0], ySangatTinggip[1]);
+
+  grendah = kurvaTurun(g, gRendah[0], gRendah[1]); 
+  gtinggi = kurvaNaik(g, gTinggi[0], gTinggi[1]);
+
 
   // inferensi
   // mencari nilai minimum a-predikat dan menghitung nilai z;
