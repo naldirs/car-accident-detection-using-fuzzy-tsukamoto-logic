@@ -1,24 +1,26 @@
+# Car Accident Detection Using Fuzzy Tsukamoto Logic
 Pendeteksi Kecelakaan Mobil menggunakan Logika Fuzzy Tsukamoto
 Lampiran perancangan dan kode program dari tugas akhir skripsi.
 
-## Perancangan Fuzzy
+## Design Fuzzy
 
-### Himpunan Fuzzy Fungsi Input
+### Membership Fuzzy Input Sets
 
-| Variabel | Satuan | Semesta Pembicaraan | Nama Himpunan |
-|----------|--------|---------------------|---------------|
-| Akselerometer (X) | Gravitasi(g)| ≤-4 | Tinggi(n)
-| | | -4 – 4	| Rendah |
-| | | ≥ 4	| Tinggi(p) |
-| Akselerometer (Y) | Gravitasi(g) | ≤-8 |	SangatTinggi(n) |
-| | | -8 – 0 |	Tinggi(n)
-| | | -4 – 4 |	Rendah
-| | | 0 – 8	| Tinggi(p)
-| | | ≥ 8	| SangatTinggi(p)
-| Getaran	 | Getaran | 0 – 5000 |	Rendah |
-| |	|	≥ 5000 |	Tinggi |
+#### Akselerometer(X) Membership
+<img src="https://user-images.githubusercontent.com/74083958/219872555-daa4794e-1bd7-43dc-bed6-81d626db7d05.png" width="450" height="250">
+- xTinggin {-4, 0} - xRendah {-4, 0, 4} - xTinggip {0, 4} 
 
-### Himpunan Fuzzy Fungsi Output
+
+#### Akslerometer(Y) Membership
+<img src="https://user-images.githubusercontent.com/74083958/219873821-dc252ef2-d0d9-4e90-bbc6-e96308fb62f0.png" width="450" height="250">
+- ySangatTinggin {-8, -4} - yTinggin {-8, -4, 0} - yRendah {-4, 0, 4} - yTinggip {0, 4, 8} - ySangatTinggip {4, 8}
+
+#### Getaran Membership
+<img src="https://user-images.githubusercontent.com/74083958/219874331-a14afffb-c24c-4235-8392-4fa6dec275f2.png" width="450" height="250">
+- gRendah {0, 5000} - gTinggi {5000, 0}
+
+
+### Membership Fuzzy Output
 
 | Variabel | Semesta Pembicaraan | Nama Himpunan |
 |----------|---------------------|---------------|
@@ -26,7 +28,7 @@ Lampiran perancangan dan kode program dari tugas akhir skripsi.
 | |	3 – 6 |	Tabrakan |
 | |	6 – 9 |	Terguling |
 
-### Aturan
+### Rules
 
 | Ke- | Akselerometer(X) | Akselerometer(Y) | Getaran | Status |
 |-----|------------------|------------------|---------|--------|
@@ -62,33 +64,39 @@ Lampiran perancangan dan kode program dari tugas akhir skripsi.
 | 30 | Tinggi(p)	| SangatTinggi(p)	|Rendah	| Normal |
 
 ## Flowchart
-![3 6 Perancangan pross](https://user-images.githubusercontent.com/74083958/206358202-6568e400-54c4-4abe-b522-e7278b166bb1.jpg)
+<img src="https://user-images.githubusercontent.com/74083958/206358202-6568e400-54c4-4abe-b522-e7278b166bb1.jpg" width="750" height="550">
 
 
 ## Wiring Diagram
-![skripsi sensor pendeteksi fix 3_bb](https://user-images.githubusercontent.com/74083958/193984130-8657b2d0-5125-4660-97df-59785a902755.png)
+<img src="https://user-images.githubusercontent.com/74083958/193984130-8657b2d0-5125-4660-97df-59785a902755.png" >
 Part:
-1. Sensor getar SW-420
-2. Akselerometer ADXL345
+
+1. Vibration Sensor SW-420 for detect vibration (getaran) from car
+2. Accelerometer ADXL345 for detect collision direction 
 3. Buzzer passive
 4. GSM SIM900A
 5. GPS Ublox NEO-6M
 
 Note:
-- yang digunakan di projek ini WEMOS D1 Mini ver 3.1.0
-- tambahkan step up di modul gsm (kadang gsmnya hidup-mati kalau disambung langsung ke seperti di diagram)
+- im using WEMOS D1 Mini ver 3.1.0 in this project
+- i recommend to add DC to DC step up module, because gsm modul cant turn on if i using power from my laptop, but if i using from powerbank or adapter it can turn on
 
-## Hasil dan Dokumentasi
-### Bentuk alat secara keseluruhan
-![4 1 Implementasi Alat (dg  Detail)](https://user-images.githubusercontent.com/74083958/206363446-bcba1f2c-aae3-4c83-97a3-a2459413a16b.PNG)
+## Results and Documentation
+### Overall design
+<img src="https://user-images.githubusercontent.com/74083958/206363446-bcba1f2c-aae3-4c83-97a3-a2459413a16b.PNG">
 
-### Tampilan Output Serial
-![serial monitor](https://user-images.githubusercontent.com/74083958/206359982-eec76994-6d8d-4cf2-a9f3-abeaaf07f6af.png)
+### Serial Monitor Output
+<img src="https://user-images.githubusercontent.com/74083958/206359982-eec76994-6d8d-4cf2-a9f3-abeaaf07f6af.png" width="950" height="350">
 
-### Hasil pengiriman pesan
-![4 15 Pengujian Pengiriman Pesan (crop+edit)](https://user-images.githubusercontent.com/74083958/206363499-45680fda-e81e-42a2-b97c-446a1697cb20.jpg)
+### Result reciving sms
+<img src="https://user-images.githubusercontent.com/74083958/206363499-45680fda-e81e-42a2-b97c-446a1697cb20.jpg" width="450" height="550">
 
-### Dokumentasi pengambilan data serta pengujian
-![4 13 Pengujian Sistem (RC)](https://user-images.githubusercontent.com/74083958/206364580-7a3126a6-1683-4181-8b67-284e4206f742.JPG)
-![IMG_20211218_142200 with circle](https://user-images.githubusercontent.com/74083958/206368583-fa8326c0-80e7-42ce-b5a1-ebd5f41d4930.jpg)
+1. first message if the car crashes
+2. if the car rolls over
+
+### Data collection and testing documentation
+1. Collecting data for crashes and roll over using RC 1:16
+<img src="https://user-images.githubusercontent.com/74083958/206364580-7a3126a6-1683-4181-8b67-284e4206f742.JPG" width="850" height="450">
+2. Testing in real car for normal use
+<img src="https://user-images.githubusercontent.com/74083958/206368583-fa8326c0-80e7-42ce-b5a1-ebd5f41d4930.jpg" width="850" height="550">
 
