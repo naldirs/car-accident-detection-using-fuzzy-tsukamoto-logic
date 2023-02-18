@@ -83,7 +83,6 @@ Note:
 ## Results and Documentation
 ### Overall design
 <img src="https://user-images.githubusercontent.com/74083958/206363446-bcba1f2c-aae3-4c83-97a3-a2459413a16b.PNG">
-![serial monitor]()
 
 ### Serial Monitor Output
 <img src="https://user-images.githubusercontent.com/74083958/219877685-c8f61e7d-21f5-4bff-9290-9c06ba7e65b6.PNG" width="750" height="350">
