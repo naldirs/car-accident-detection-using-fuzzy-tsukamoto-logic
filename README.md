@@ -64,8 +64,7 @@ Lampiran perancangan dan kode program dari tugas akhir skripsi.
 | 30 | Tinggi(p)	| SangatTinggi(p)	|Rendah	| Normal |
 
 ## Flowchart
-<img src="https://user-images.githubusercontent.com/74083958/206358202-6568e400-54c4-4abe-b522-e7278b166bb1.jpg" width="750" height="550">
-
+<img src="https://user-images.githubusercontent.com/74083958/219877315-fb5eb901-f4a3-410d-a6f9-3c91789d5304.png" width="750" height="550">
 
 ## Wiring Diagram
 <img src="https://user-images.githubusercontent.com/74083958/193984130-8657b2d0-5125-4660-97df-59785a902755.png" >
